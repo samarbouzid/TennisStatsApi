@@ -7,7 +7,7 @@ COPY TennisStats.sln ./
 COPY src/TennisStats.Domain/TennisStats.Domain.csproj src/TennisStats.Domain/
 COPY src/TennisStats.Application/TennisStats.Application.csproj src/TennisStats.Application/
 COPY src/TennisStats.Infrastructure/TennisStats.Infrastructure.csproj src/TennisStats.Infrastructure/
-COPY src/TennisStats.Api/TennisStats.API.csproj src/TennisStats.Api/
+COPY src/TennisStats.Api/TennisStats.Api.csproj src/TennisStats.Api/
 COPY tests/TennisStats.Tests/TennisStats.Tests.csproj tests/TennisStats.Tests/
 
 # Restore dependencies
@@ -29,4 +29,4 @@ COPY --from=build /app/publish .
 EXPOSE 8080
 ENV ASPNETCORE_URLS=http://+:8080
 
-ENTRYPOINT ["dotnet", "TennisStats.API.dll"]
+ENTRYPOINT ["dotnet", "TennisStats.Api.dll"]
